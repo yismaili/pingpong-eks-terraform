@@ -1,4 +1,4 @@
-cluster_name = "pingpong-k8s-cluster"
+ cluster_name = "pingpong-k8s-cluster"
 region       = "us-west-2"
 k8s_version  = "1.28"
 
