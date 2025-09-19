@@ -11,7 +11,6 @@ backend_node_count  = 1
 database_node_size  = "t3.small"   
 database_node_count = 1
 
-# PostgreSQL storage configuration
 postgres_volume_size       = 20
 postgres_volume_type       = "gp3"
 postgres_volume_iops       = 3000

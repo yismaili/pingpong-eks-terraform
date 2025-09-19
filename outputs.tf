@@ -1,4 +1,3 @@
-# Cluster outputs
 output "cluster_id" {
   description = "EKS cluster ID"
   value       = aws_eks_cluster.k8s_cluster.id
@@ -39,7 +38,7 @@ output "cluster_primary_security_group_id" {
   value       = aws_eks_cluster.k8s_cluster.vpc_config[0].cluster_security_group_id
 }
 
-# Node group outputs
+
 output "node_groups" {
   description = "EKS node groups"
   value = {
@@ -65,8 +64,6 @@ output "storage_class_name" {
   description = "Name of the GP3 storage class"
   value       = kubernetes_storage_class_v1.gp3.metadata[0].name
 }
-
-# Note: PVC is created via kubectl/k8s manifests, not Terraform
 
 # Namespace output
 output "pingpong_namespace" {

@@ -64,8 +64,6 @@ variable "node_count" {
   default     = 3
 }
 
-# Add these variables to your variables.tf
-
 variable "postgres_volume_size" {
   description = "Size of PostgreSQL EBS volume in GB"
   type        = number

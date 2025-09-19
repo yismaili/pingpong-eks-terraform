@@ -106,7 +106,7 @@ resource "aws_eks_cluster" "k8s_cluster" {
   ]
 }
 
-# OIDC provider for EKS (needed for EBS CSI driver)
+# OIDC provider for EKS 
 data "tls_certificate" "eks" {
   url = aws_eks_cluster.k8s_cluster.identity[0].oidc[0].issuer
 }
