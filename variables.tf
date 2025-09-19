@@ -63,3 +63,29 @@ variable "node_count" {
   type        = number
   default     = 3
 }
+
+# Add these variables to your variables.tf
+
+variable "postgres_volume_size" {
+  description = "Size of PostgreSQL EBS volume in GB"
+  type        = number
+  default     = 20
+}
+
+variable "postgres_volume_type" {
+  description = "EBS volume type for PostgreSQL"
+  type        = string
+  default     = "gp3"
+}
+
+variable "postgres_volume_iops" {
+  description = "IOPS for PostgreSQL EBS volume (gp3 only)"
+  type        = number
+  default     = 3000
+}
+
+variable "postgres_volume_throughput" {
+  description = "Throughput for PostgreSQL EBS volume (gp3 only)"
+  type        = number
+  default     = 125
+}
